@@ -1,0 +1,555 @@
+//font
+@mixin fontNormal() {
+  font-family: "Roblox Font", sans-serif;
+}
+
+@mixin fontBlackOutline() {
+  font-family: "Roblox Black Outline", sans-serif;
+}
+
+@mixin fontBlackRound() {
+  font-family: "Roblox Black Round", sans-serif;
+}
+
+@mixin fontBlackShadow() {
+  font-family: "Roblox Black Shadow", sans-serif;
+}
+
+@mixin mainfont() {
+  font-family: "Encode Sans Compressed", sans-serif;
+}
+
+@mixin mainfontcondense() {
+  font-family: "Encode Sans Condensed", sans-serif;
+}
+@mixin mainfontNarrow() {
+  font-family: "Encode Sans Narrow", sans-serif;
+}
+@mixin mainfontNormal() {
+  font-family: "Encode Sans Normal", sans-serif;
+}
+@mixin mainfontWide() {
+  font-family: "Encode Sans Wide", sans-serif;
+}
+
+//colors
+$primaryColor: #1dcdfe;
+$secondaryColor: #34f5c6;
+$darkColor: #1d1b1b;
+$otherBlue: #060f90;
+$primaryBlack: #000;
+$secondaryColorDeep: #198754;
+
+//margins
+$row-margin-top: 100px;
+
+.navbar {
+  padding: 30px 0px 30px 0px;
+}
+
+.hidetrans{
+  animation: fade-out 500ms forwards;
+  // display:none;
+  // opacity: 0; 
+  
+}
+
+.hide{
+  display: none;
+  opacity: 0;
+}
+
+@keyframes fade-in{
+  0%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+  }
+}
+
+@keyframes fade-out{
+  100%{
+    opacity: 0;
+  }
+  0%{
+    opacity: 1;
+  }
+
+}
+
+.show{
+  display: block;
+}
+
+@media only screen and (max-width: 768px) {
+  /* For mobile phones: */
+  .nv {
+    background-color: rgb(29, 27, 27) !important;
+  }
+  .mantra {
+    margin-top: 10px;
+  }
+}
+
+.brand-logo {
+  height: 50px !important;
+  width: 50px !important;
+}
+
+body {
+  background-color: rgb(29, 27, 27);
+}
+
+.top {
+  background: url("images/backhome2.png") center center;
+  background-size: cover;
+  height: 90vh;
+  position: relative;
+  //   z-index: 100;
+  /* opacity: 0.5; */
+  color: white;
+  //   margin-top: 100px;
+}
+.navbar-brand-text {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  font-size: 25px;
+  @include fontBlackRound();
+}
+.mantra {
+  padding-top: 20%;
+  h1 {
+    opacity: 1 !important;
+    font-size: 50px !important;
+  }
+}
+
+.bar-top {
+  height: 10px !important;
+  color: $primaryColor;
+  width: 100px !important;
+  opacity: 1;
+}
+
+.bar-bottom {
+  height: 7px !important;
+  color: $primaryColor;
+  width: 100px !important;
+  padding: 5px 0px 0px 10px !important;
+  margin-left: 10px;
+  opacity: 1;
+}
+
+.palette {
+  @mixin thene() {
+    padding-left: 20px;
+    font-size: 20px;
+    font-weight: bold;
+  }
+}
+
+/* Color of the links BEFORE scroll */
+.navbar-scroll .nav-link,
+.navbar-scroll .navbar-toggler-icon {
+  color: #fff;
+}
+
+/* Color of the links AFTER scroll */
+.navbar-scrolled .nav-link,
+.navbar-scrolled .navbar-toggler-icon {
+  color: #4f4f4f;
+}
+
+/* Color of the navbar AFTER scroll */
+.navbar-scrolled {
+  background-color: #fff;
+}
+
+/* An optional height of the navbar AFTER scroll */
+.navbar.navbar-scroll.navbar-scrolled {
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.nv {
+  background-color: transparent;
+}
+.nvblack {
+  background-color: #271f1f;
+}
+
+.quote {
+  // position: relative;
+  .quote-box {
+    z-index: 10 !important;
+    background-color: $secondaryColor;
+    min-height: 400px;
+    width: 100%;
+    margin-top: -350px;
+    position: relative;
+    // background: linear-gradient(to right, white, #867c91);
+    padding: 40px;
+
+    h2 {
+      @include mainfontWide();
+      font-weight: bold;
+      color: $primaryBlack;
+    }
+    p {
+      @include mainfontNormal();
+    }
+  }
+}
+
+.button-primary {
+  background-color: #198754;
+  // background: linear-gradient(to right, #198754, #4ea77e, #198754,);
+  padding: 7px;
+  min-width: 120px;
+  border: 0;
+  color: white;
+  border-radius: 20px;
+  // box-shadow: 0px 1px 2px 2px rgba($color: #000000, $alpha: 0.2);
+}
+
+.about-us {
+  margin-top: $row-margin-top;
+  color: white;
+  margin-bottom: $row-margin-top;
+  h2 {
+    @include mainfontWide();
+    font-weight: bold;
+    font-size: 50px;
+  }
+  .about-below {
+    margin-top: 100px;
+  }
+  .pic-box {
+    background-image: url("images/docotro.png");
+    height: 100%;
+  }
+  // .service-box {
+  //   height: inherit;
+  //   // background-color: $primaryBlack;
+  //   // background: linear-gradient(to right, #281f1f, #322c2c, #281f1f);
+  //   padding: 30px;
+  //   color: white;
+  //   border-top-right-radius: 50px;
+  //     div {
+  //       i {
+  //       font-size: 20px;
+  //       padding: 5px;
+  //       }
+  //    }
+  //    h5{
+  //     padding: 5px 0px 5px 0px;
+  //    }
+  // }
+  .about-logo{
+    display: flex;
+    justify-content: right;
+    .logo{
+      background-color: $secondaryColorDeep;
+      padding: 10px;
+      border-radius: 50%;
+      width: 70px;
+      height: 70px;
+    }
+    
+  }
+
+  .about-point{
+    margin-bottom: 20px;
+  }
+  .about-point:hover{
+    padding-left: 10px;
+    transition: all 0.2s;
+    .logo{
+      background-color: $primaryColor;
+      
+    }
+  }
+}
+.row {
+  margin-top: 20px;
+}
+
+.parallax{
+  height: 50vh;
+  background-image: url("images/behindcomputer.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.service{
+  // height: inherit;
+  background-color: white;
+  padding: $row-margin-top 0px $row-margin-top 0px !important;
+ 
+  .service-item{
+    box-shadow: 0px 1px 70px rgba($color: #000000, $alpha: 0.1);
+    border-top-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    padding: 20px;
+    margin: 50px 0px 20px 0px;
+    transition: all 0.3s;
+  }
+  .service-item:hover{
+    margin-top: -1px;
+    transition: all 0.3s;
+  }
+  h2 {
+    @include mainfontWide();
+    font-weight: bold;
+    font-size: 50px;
+  }
+  .service-info{
+    
+  }
+}
+.clients{
+  margin-top: $row-margin-top;
+  // color: white !important;
+  margin-bottom: $row-margin-top;
+  // background-color: white;
+  h2{
+    @include mainfontWide();
+    font-weight: bold;
+    font-size: 50px;
+    color: white !important;
+  }
+}
+
+
+// Portfolio
+.portfolio{
+  margin-top: $row-margin-top;
+  margin-bottom: $row-margin-top;
+  background-color: white;
+  padding-top: $row-margin-top;
+  padding-bottom: $row-margin-top;
+  h2{
+    @include mainfontWide();
+    font-weight: bold;
+    font-size: 50px;
+    color: $primaryBlack !important;
+  }
+  .tab-buttons{
+    display: flex;
+    justify-content: center;
+
+    span{
+      padding: 10px;
+    }
+  }
+  
+  img{
+    width: 50vw;
+    height: 40vh;
+    // transition: all 2s;
+    // animation: fade-in 500ms linear 100ms;
+    
+  }
+  .img{
+
+    // transition: all 5s;
+  }
+}
+
+@keyframes anim {
+  from {
+    top: 0px;
+  }
+  to{
+    top: 200px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+/*--------------------------------------------------------------
+# Portfolio
+--------------------------------------------------------------*/
+.portfolio #portfolio-flters {
+  padding: 0;
+  margin: 0 auto 35px auto;
+  list-style: none;
+  text-align: center;
+  border-radius: 50px;
+  padding: 2px 15px;
+}
+
+.portfolio #portfolio-flters li {
+  cursor: pointer;
+  display: inline-block;
+  padding: 10px 20px 12px 20px;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1;
+  text-transform: uppercase;
+  color: #313030;
+  margin-bottom: 5px;
+  transition: all 0.3s ease-in-out;
+  border-radius: 50px;
+}
+
+.portfolio #portfolio-flters li:hover,
+.portfolio #portfolio-flters li.filter-active {
+  color: #ff5821;
+  background: #fff1ed;
+}
+
+.portfolio #portfolio-flters li:last-child {
+  margin-right: 0;
+}
+
+.portfolio .portfolio-item {
+  margin-bottom: 30px;
+}
+
+.portfolio .portfolio-item .portfolio-info {
+  opacity: 0;
+  position: absolute;
+  left: 30px;
+  right: 30px;
+  bottom: 0;
+  z-index: 3;
+  transition: all ease-in-out 0.3s;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 15px;
+}
+
+.portfolio .portfolio-item .portfolio-info h4 {
+  font-size: 18px;
+  color: #fff;
+  font-weight: 600;
+  color: #473d3a;
+}
+
+.portfolio .portfolio-item .portfolio-info p {
+  color: #7f6d68;
+  font-size: 14px;
+  margin-bottom: 0;
+}
+
+.portfolio .portfolio-item .portfolio-info .preview-link,
+.portfolio .portfolio-item .portfolio-info .details-link {
+  position: absolute;
+  right: 40px;
+  font-size: 24px;
+  top: calc(50% - 18px);
+  color: #635551;
+}
+
+.portfolio .portfolio-item .portfolio-info .preview-link:hover,
+.portfolio .portfolio-item .portfolio-info .details-link:hover {
+  color: #ff5821;
+}
+
+.portfolio .portfolio-item .portfolio-info .details-link {
+  right: 10px;
+}
+
+.portfolio .portfolio-item .portfolio-links {
+  opacity: 0;
+  left: 0;
+  right: 0;
+  text-align: center;
+  z-index: 3;
+  position: absolute;
+  transition: all ease-in-out 0.3s;
+}
+
+.portfolio .portfolio-item .portfolio-links a {
+  color: #fff;
+  margin: 0 2px;
+  font-size: 28px;
+  display: inline-block;
+  transition: 0.3s;
+}
+
+.portfolio .portfolio-item .portfolio-links a:hover {
+  color: #ffa587;
+}
+
+.portfolio .portfolio-item:hover .portfolio-info {
+  opacity: 1;
+  bottom: 20px;
+}
+
+/*--------------------------------------------------------------
+# Portfolio Details
+--------------------------------------------------------------*/
+.portfolio-details {
+  padding-top: 20px;
+}
+
+// .portfolio-details .portfolio-details-slider img {
+//   width: auto;
+//   height: 5vh !important;
+// }
+
+.portfolio-details .portfolio-details-slider .swiper-pagination {
+  margin-top: 20px;
+  position: relative;
+}
+
+.portfolio-details .portfolio-details-slider .swiper-pagination .swiper-pagination-bullet {
+  width: 12px;
+  height: 12px;
+  background-color: #fff;
+  opacity: 1;
+  border: 1px solid #ff5821;
+}
+
+.portfolio-details .portfolio-details-slider .swiper-pagination .swiper-pagination-bullet-active {
+  background-color: #ff5821;
+}
+
+.portfolio-details .portfolio-info {
+  padding: 30px;
+  box-shadow: 0px 0 30px rgba(71, 61, 58, 0.08);
+}
+
+.portfolio-details .portfolio-info h3 {
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #eee;
+}
+
+.portfolio-details .portfolio-info ul {
+  list-style: none;
+  padding: 0;
+  font-size: 15px;
+}
+
+.portfolio-details .portfolio-info ul li+li {
+  margin-top: 10px;
+}
+
+.portfolio-details .portfolio-description {
+  padding-top: 30px;
+}
+
+.portfolio-details .portfolio-description h2 {
+  font-size: 26px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.portfolio-details .portfolio-description p {
+  padding: 0;
+}
