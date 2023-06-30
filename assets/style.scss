@@ -293,7 +293,7 @@ body {
     box-shadow: 0px 1px 70px rgba($color: #000000, $alpha: 0.1);
     border-top-left-radius: 20px;
     border-bottom-right-radius: 20px;
-    padding: 20px;
+    padding: 50px;
     margin: 50px 0px 20px 0px;
     transition: all 0.3s;
   }
@@ -311,26 +311,26 @@ body {
   }
 }
 .clients{
-  margin-top: $row-margin-top;
+  padding: $row-margin-top 0px $row-margin-top 0px !important;
+ 
   // color: white !important;
-  margin-bottom: $row-margin-top;
+  background-color: aqua !important;
+  // margin-bottom: $row-margin-top aqua;
   // background-color: white;
   h2{
     @include mainfontWide();
     font-weight: bold;
     font-size: 50px;
-    color: white !important;
+    color: dark !important;
   }
 }
 
 
 // Portfolio
 .portfolio{
-  margin-top: $row-margin-top;
-  margin-bottom: $row-margin-top;
+  padding: $row-margin-top 0px $row-margin-top 0px !important;
   background-color: white;
-  padding-top: $row-margin-top;
-  padding-bottom: $row-margin-top;
+
   h2{
     @include mainfontWide();
     font-weight: bold;
@@ -347,17 +347,77 @@ body {
   }
   
   img{
-    width: 50vw;
-    height: 40vh;
+    width: auto;
+    height: auto;
     // transition: all 2s;
     // animation: fade-in 500ms linear 100ms;
     
   }
-  .img{
 
-    // transition: all 5s;
+}
+
+.contact{
+  padding: $row-margin-top 0px $row-margin-top 0px !important;
+  background-color: white;
+  .contact-details{
+    margin-top: 10px;
+    box-shadow: 0px 1px 70px rgba($color: #000000, $alpha: 0.1);
+    // padding: 50px;
+  }
+  h2{
+    @include mainfontWide();
+    font-weight: bold;
+    font-size: 50px;
+    color: $primaryBlack !important;
+  }
+
+  .address-back{
+    background-color: $darkColor;
+    padding: 100px;
+    color: white;
+  }
+  .contact-item{
+    padding-bottom: 50px;
+  }
+  .form{
+    padding: 100px;
   }
 }
+.footer{
+  padding: $row-margin-top 0px $row-margin-top 0px !important;
+  color: white;
+  h5{
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 25px;
+    @include fontBlackRound();
+  }
+  p:nth-child(3){
+    margin: 0;
+  }
+  p:nth-child(2){
+    padding-bottom: 30px;
+  }
+  .other-cols{
+    h5{
+      color: white;
+    font-weight: bold;
+    font-size: 25px;
+    }
+    ul{
+      li{
+        padding: 5px;
+      }
+      a{
+        text-decoration: none;
+        color: $secondaryColor;
+      }
+    }
+  }
+
+}
+
 
 @keyframes anim {
   from {
@@ -367,15 +427,6 @@ body {
     top: 200px;
   }
 }
-
-
-
-
-
-
-
-
-
 
 
 /*--------------------------------------------------------------
@@ -552,4 +603,94 @@ body {
 
 .portfolio-details .portfolio-description p {
   padding: 0;
+}
+
+/*--------------------------------------------------------------
+# Team
+--------------------------------------------------------------*/
+.team{
+  padding: $row-margin-top 0px $row-margin-top 0px !important;
+  background-color: rgb(236, 251, 247);
+
+  h2{
+    @include mainfontWide();
+    font-weight: bold;
+    font-size: 50px;
+    color: $primaryBlack !important;
+  }
+}
+
+.team .member {
+  margin-bottom: 20px;
+  overflow: hidden;
+  text-align: center;
+  border-radius: 5px;
+  background: #fff;
+  box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
+}
+
+.team .member .member-img {
+  position: relative;
+  overflow: hidden;
+}
+
+.team .member .social {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  height: 40px;
+  opacity: 0;
+  transition: ease-in-out 0.3s;
+  background: rgba(255, 255, 255, 0.85);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.team .member .social a {
+  transition: color 0.3s;
+  color: #473d3a;
+  margin: 0 10px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.team .member .social a:hover {
+  color: #ff5821;
+}
+
+.team .member .social i {
+  font-size: 18px;
+  line-height: 0;
+}
+
+.team .member .member-info {
+  padding: 25px 15px;
+}
+
+.team .member .member-info h4 {
+  font-weight: 700;
+  margin-bottom: 5px;
+  font-size: 18px;
+  color: #473d3a;
+}
+
+.team .member .member-info span {
+  display: block;
+  font-size: 13px;
+  font-weight: 400;
+  color: #989595;
+}
+
+.team .member .member-info p {
+  font-style: italic;
+  font-size: 14px;
+  line-height: 26px;
+  color: #656262;
+}
+
+.team .member:hover .social {
+  opacity: 1;
 }
