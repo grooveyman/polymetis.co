@@ -38,6 +38,10 @@
   }
   .mantra {
     margin-top: 10px;
+    font-size: smaller;
+  }
+  .mantra .mantra-service {
+    font-size: 50px !important;
   }
 }
 .brand-logo {
@@ -67,11 +71,14 @@ body {
 }
 
 .mantra {
-  padding-top: 20%;
+  padding-top: 10%;
 }
 .mantra h1 {
   opacity: 1 !important;
   font-size: 50px !important;
+}
+.mantra .mantra-service {
+  font-size: 80px;
 }
 
 .bar-top {
